@@ -93,7 +93,6 @@ get_Food_Items <- function(food_databse, ocrscan){
   for (food in food_databse$Name) {
     for(row in 1:nrow(ocrscan)){
       if(grepl(tolower(food), tolower(ocrscan[row,]$text), fixed = TRUE)){
-        print(food)
         food_list = append(food_list,food)
       }
     }
